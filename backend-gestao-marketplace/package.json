@@ -1,7 +1,7 @@
 {
   "name": "backend-gestao-marketplace",
   "version": "1.0.0",
-  "description": "Backend do desafio de lançamento do curso de Angular na Rocketseat",
+  "description": "Backend do Marketplace",
   "main": "dist/server.js",
   "scripts": {
     "build": "tsc",

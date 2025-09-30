@@ -1,12 +1,4 @@
-# 🚀 Desafio de lançamento do curso de Angular na Rocketseat
-
-### ⚠️ **Instruções Importantes**
-
-- A branch **`01-layout-completo`** deve ser utilizada por quem deseja **iniciar o desafio do zero**, acompanhando os conteúdos e evoluindo o projeto passo a passo.  
-
-- A branch **`main`** contém o projeto **finalizado**, de acordo com o que foi desenvolvido nos vídeos do desafio.  
-
----
+# Marketplace Angular
 
 ### 📂 Descrição do Projeto
 
@@ -16,7 +8,7 @@ Este projeto é uma simulação de um sistema de gestão de produtos que inclui 
 * **Listagem de Produtos**: Exibição de produtos com opções de filtro por título e status.
 * **Tela de Criação de Produto**: Interface para adicionar novos produtos ao catálogo.
 
-O desafio é dividido em dois projetos, um frontend em Angular e um backend em Express, que estão localizados no mesmo repositório.
+Dividido em dois projetos, um frontend em Angular e um backend em Express, que estão localizados no mesmo repositório.
 
 ---
 
@@ -57,9 +49,7 @@ Para rodar a aplicação, você deve iniciar tanto o servidor do backend quanto 
 Certifique-se de que as seguintes ferramentas estão instaladas em seu ambiente para que os projetos funcionem corretamente:
 
 * **Node.js**: Versão 22.19.0 (LTS).  
-* **Angular CLI**: Versão 20.  
-* **Insomnia**: Última versão para testar os endpoints do backend.  
-* **Visual Studio Code (VS Code)**: Última versão recomendada para edição de código.  
+* **Angular CLI**: Versão 20.
 
 ---
 
@@ -68,8 +58,7 @@ Certifique-se de que as seguintes ferramentas estão instaladas em seu ambiente 
 Para melhorar a produtividade durante o desenvolvimento, recomenda-se instalar as seguintes extensões no **Visual Studio Code**:
 
 - **Angular Language Service** → Fornece autocompletar, dicas e suporte avançado ao desenvolvimento Angular.  
-- **Material Icon Theme** → Adiciona ícones visuais aos arquivos e pastas, facilitando a navegação no projeto.  
-- **Shades of Purple** → Tema moderno e vibrante para melhorar a experiência visual no editor.  
+- **Material Icon Theme** → Adiciona ícones visuais aos arquivos e pastas, facilitando a navegação no projeto.
 - **Tailwind CSS IntelliSense** → Autocompletar e validação para classes do Tailwind CSS, tornando o uso mais ágil e confiável.  
 
 ---
