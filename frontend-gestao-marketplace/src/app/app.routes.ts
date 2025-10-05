@@ -3,10 +3,13 @@ import { Login } from './pages/login/login';
 import { Layout } from './pages/layout/layout';
 import { Products } from './pages/products/products';
 import { NewProduct } from './pages/new-product/new-product';
+import { authGuard } from './guards/auth-guard';
+import { loginGuard } from './guards/login-guard';
 
 export const routes: Routes = [
   {
     path: "login",
+    canActivate: [loginGuard],
     component: Login
   },
   {
@@ -17,6 +20,7 @@ export const routes: Routes = [
   {
     path: "",
     component: Layout,
+    canActivateChild: [authGuard],
     children: [
       {
         path: "products",

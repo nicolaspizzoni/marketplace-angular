@@ -6,7 +6,7 @@ import { IAuthSuccess } from '../interfaces/auth-success';
 @Injectable({
   providedIn: 'root'
 })
-export class User {
+export class UserService {
   private readonly _httpClient = inject(HttpClient)
 
   validateUser(): Observable<IAuthSuccess> {
