@@ -11,13 +11,11 @@ export const loginGuard: CanActivateFn = async (route, state) => {
     await firstValueFrom(_user.validateUser())
 
     if (state.url === '/login') {
-      console.log("tentou acessar /login")
       return _router.navigate(['/products'])
     }
 
+  } finally {
     return true
-  } catch (error) {
-    return _router.navigate(['/login'])
   }
 
 }
