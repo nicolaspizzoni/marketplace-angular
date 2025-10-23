@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ProductsService } from '../../services/products';
+import { INewProductRequest } from '../../interfaces/new-product-request';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'app-new-product',
@@ -15,9 +18,28 @@ export class NewProduct {
     price: new FormControl(0, [Validators.required]),
     category: new FormControl('', [Validators.required])
   })
+  successMessage= '';
+
+  private readonly _productsNewService = inject(ProductsService)
 
   saveProduct() {
     console.log("novo produto", this.formProduct)
+
+    if (this.formProduct.invalid || !this.imageBase64) return;
+
+    const newProduct: INewProductRequest = {
+      title: this.formProduct.value.title!,
+      description: this.formProduct.value.description!,
+      category: this.formProduct.value.category!,
+      price: this.formProduct.value.price!,
+      imageBase64: this.imageBase64
+    }
+
+    this._productsNewService.saveProduct(newProduct).pipe(take(1)).subscribe({
+      next: (response) => {
+        this.successMessage = response.message;
+      }
+    })
   }
 
   onFileUpload(event: Event) {
