@@ -13,4 +13,8 @@ export class ProductsService {
   saveProduct(product: INewProductRequest): Observable<INewProductResponse> {
     return this._httpClient.post<INewProductResponse>('http://localhost:3000/api/products', product)
   }
+
+  getProducts(): Observable<INewProductResponse> {
+    return this._httpClient.get<INewProductResponse>('http://localhost:3000/api/products')
+  }
 }
